@@ -19,7 +19,7 @@ suite =
             initA model = { keyA = model }
           in
             "model"
-            |> Apply.apply view
+            |> Apply.map view
               ( initA )
             |> Expect.equal
               { fieldA = { keyA = "model" }
@@ -38,7 +38,7 @@ suite =
             initB model = { keyB = model }
           in
             "model"
-            |> Apply.apply2 view
+            |> Apply.map2 view
               ( initA )
               ( initB )
             |> Expect.equal
@@ -61,7 +61,7 @@ suite =
             initC model = { keyC = model }
           in
             "model"
-            |> Apply.apply3 view
+            |> Apply.map3 view
               ( initA )
               ( initB )
               ( initC )
@@ -88,7 +88,7 @@ suite =
             initD model = { keyD = model }
           in
             "model"
-            |> Apply.apply4 view
+            |> Apply.map4 view
               ( initA )
               ( initB )
               ( initC )
@@ -119,7 +119,7 @@ suite =
             initE model = { keyE = model }
           in
             "model"
-            |> Apply.apply5 view
+            |> Apply.map5 view
               ( initA )
               ( initB )
               ( initC )
@@ -154,7 +154,7 @@ suite =
             initF model = { keyF = model }
           in
             "model"
-            |> Apply.apply6 view
+            |> Apply.map6 view
               ( initA )
               ( initB )
               ( initC )
@@ -193,7 +193,7 @@ suite =
             initG model = { keyG = model }
           in
             "model"
-            |> Apply.apply7 view
+            |> Apply.map7 view
               ( initA )
               ( initB )
               ( initC )
@@ -236,7 +236,7 @@ suite =
             initH model = { keyH = model }
           in
             "model"
-            |> Apply.apply8 view
+            |> Apply.map8 view
               ( initA )
               ( initB )
               ( initC )
@@ -283,7 +283,7 @@ suite =
             initI model = { keyI = model }
           in
             "model"
-            |> Apply.apply9 view
+            |> Apply.map9 view
               ( initA )
               ( initB )
               ( initC )
@@ -334,7 +334,7 @@ suite =
             initJ model = { keyJ = model }
           in
             "model"
-            |> Apply.apply10 view
+            |> Apply.map10 view
               ( initA )
               ( initB )
               ( initC )
@@ -389,7 +389,7 @@ suite =
             initK model = { keyK = model }
           in
             "model"
-            |> Apply.apply11 view
+            |> Apply.map11 view
               ( initA )
               ( initB )
               ( initC )
@@ -448,7 +448,7 @@ suite =
             initL model = { keyL = model }
           in
             "model"
-            |> Apply.apply12 view
+            |> Apply.map12 view
               ( initA )
               ( initB )
               ( initC )
@@ -511,7 +511,7 @@ suite =
             initM model = { keyM = model }
           in
             "model"
-            |> Apply.apply13 view
+            |> Apply.map13 view
               ( initA )
               ( initB )
               ( initC )
@@ -578,7 +578,7 @@ suite =
             initN model = { keyN = model }
           in
             "model"
-            |> Apply.apply14 view
+            |> Apply.map14 view
               ( initA )
               ( initB )
               ( initC )
@@ -649,7 +649,7 @@ suite =
             initO model = { keyO = model }
           in
             "model"
-            |> Apply.apply15 view
+            |> Apply.map15 view
               ( initA )
               ( initB )
               ( initC )
@@ -724,7 +724,7 @@ suite =
             initP model = { keyP = model }
           in
             "model"
-            |> Apply.apply16 view
+            |> Apply.map16 view
               ( initA )
               ( initB )
               ( initC )

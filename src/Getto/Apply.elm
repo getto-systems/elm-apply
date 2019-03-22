@@ -1,26 +1,26 @@
 module Getto.Apply exposing
-  ( apply
-  , apply2
-  , apply3
-  , apply4
-  , apply5
-  , apply6
-  , apply7
-  , apply8
-  , apply9
-  , apply10
-  , apply11
-  , apply12
-  , apply13
-  , apply14
-  , apply15
-  , apply16
+  ( map
+  , map2
+  , map3
+  , map4
+  , map5
+  , map6
+  , map7
+  , map8
+  , map9
+  , map10
+  , map11
+  , map12
+  , map13
+  , map14
+  , map15
+  , map16
   )
 
 {-| apply utilities
 
 # Helpers
-@docs apply, apply2, apply3, apply4, apply5, apply6, apply7, apply8, apply9, apply10, apply11, apply12, apply13, apply14, apply15, apply16
+@docs map, map2, map3, map4, map5, map6, map7, map8, map9, map10, map11, map12, map13, map14, map15, map16
  -}
 
 
@@ -34,11 +34,11 @@ module Getto.Apply exposing
 
     { name = "name"
     }
-    |> Apply.apply view
+    |> Apply.map view
       ( initName )
  -}
-apply : (a -> model) -> (init -> a) -> init -> model
-apply construct a model = construct
+map : (a -> model) -> (init -> a) -> init -> model
+map construct a model = construct
   (model |> a)
 
 
@@ -55,20 +55,20 @@ apply construct a model = construct
     { name = "name"
     , age  = 20
     }
-    |> Apply.apply view
+    |> Apply.map2 view
       ( initName )
       ( initAge )
  -}
-apply2 : (a -> b -> model) -> (init -> a) -> (init -> b) -> init -> model
-apply2 construct a b model = construct
+map2 : (a -> b -> model) -> (init -> a) -> (init -> b) -> init -> model
+map2 construct a b model = construct
   (model |> a)
   (model |> b)
 
 
 {-| apply model with 3 args
  -}
-apply3 : (a -> b -> c -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> init -> model
-apply3 construct a b c model = construct
+map3 : (a -> b -> c -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> init -> model
+map3 construct a b c model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -76,8 +76,8 @@ apply3 construct a b c model = construct
 
 {-| apply model with 4 args
  -}
-apply4 : (a -> b -> c -> d -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> init -> model
-apply4 construct a b c d model = construct
+map4 : (a -> b -> c -> d -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> init -> model
+map4 construct a b c d model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -86,8 +86,8 @@ apply4 construct a b c d model = construct
 
 {-| apply model with 5 args
  -}
-apply5 : (a -> b -> c -> d -> e -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> init -> model
-apply5 construct a b c d e model = construct
+map5 : (a -> b -> c -> d -> e -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> init -> model
+map5 construct a b c d e model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -97,8 +97,8 @@ apply5 construct a b c d e model = construct
 
 {-| apply model with 6 args
  -}
-apply6 : (a -> b -> c -> d -> e -> f -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> init -> model
-apply6 construct a b c d e f model = construct
+map6 : (a -> b -> c -> d -> e -> f -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> init -> model
+map6 construct a b c d e f model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -109,8 +109,8 @@ apply6 construct a b c d e f model = construct
 
 {-| apply model with 7 args
  -}
-apply7 : (a -> b -> c -> d -> e -> f -> g -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> init -> model
-apply7 construct a b c d e f g model = construct
+map7 : (a -> b -> c -> d -> e -> f -> g -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> init -> model
+map7 construct a b c d e f g model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -122,8 +122,8 @@ apply7 construct a b c d e f g model = construct
 
 {-| apply model with 8 args
  -}
-apply8 : (a -> b -> c -> d -> e -> f -> g -> h -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> init -> model
-apply8 construct a b c d e f g h model = construct
+map8 : (a -> b -> c -> d -> e -> f -> g -> h -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> init -> model
+map8 construct a b c d e f g h model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -136,8 +136,8 @@ apply8 construct a b c d e f g h model = construct
 
 {-| apply model with 9 args
  -}
-apply9 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> init -> model
-apply9 construct a b c d e f g h i model = construct
+map9 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> init -> model
+map9 construct a b c d e f g h i model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -151,8 +151,8 @@ apply9 construct a b c d e f g h i model = construct
 
 {-| apply model with 10 args
  -}
-apply10 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> init -> model
-apply10 construct a b c d e f g h i j model = construct
+map10 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> init -> model
+map10 construct a b c d e f g h i j model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -167,8 +167,8 @@ apply10 construct a b c d e f g h i j model = construct
 
 {-| apply model with 11 args
  -}
-apply11 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> init -> model
-apply11 construct a b c d e f g h i j k model = construct
+map11 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> init -> model
+map11 construct a b c d e f g h i j k model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -184,8 +184,8 @@ apply11 construct a b c d e f g h i j k model = construct
 
 {-| apply model with 12 args
  -}
-apply12 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> init -> model
-apply12 construct a b c d e f g h i j k l model = construct
+map12 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> init -> model
+map12 construct a b c d e f g h i j k l model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -202,8 +202,8 @@ apply12 construct a b c d e f g h i j k l model = construct
 
 {-| apply model with 13 args
  -}
-apply13 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> init -> model
-apply13 construct a b c d e f g h i j k l m model = construct
+map13 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> init -> model
+map13 construct a b c d e f g h i j k l m model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -221,8 +221,8 @@ apply13 construct a b c d e f g h i j k l m model = construct
 
 {-| apply model with 14 args
  -}
-apply14 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> (init -> n) -> init -> model
-apply14 construct a b c d e f g h i j k l m n model = construct
+map14 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> (init -> n) -> init -> model
+map14 construct a b c d e f g h i j k l m n model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -241,8 +241,8 @@ apply14 construct a b c d e f g h i j k l m n model = construct
 
 {-| apply model with 15 args
  -}
-apply15 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> (init -> n) -> (init -> o) -> init -> model
-apply15 construct a b c d e f g h i j k l m n o model = construct
+map15 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> (init -> n) -> (init -> o) -> init -> model
+map15 construct a b c d e f g h i j k l m n o model = construct
   (model |> a)
   (model |> b)
   (model |> c)
@@ -262,8 +262,8 @@ apply15 construct a b c d e f g h i j k l m n o model = construct
 
 {-| apply model with 16 args
  -}
-apply16 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> p -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> (init -> n) -> (init -> o) -> (init -> p) -> init -> model
-apply16 construct a b c d e f g h i j k l m n o p model = construct
+map16 : (a -> b -> c -> d -> e -> f -> g -> h -> i -> j -> k -> l -> m -> n -> o -> p -> model) -> (init -> a) -> (init -> b) -> (init -> c) -> (init -> d) -> (init -> e) -> (init -> f) -> (init -> g) -> (init -> h) -> (init -> i) -> (init -> j) -> (init -> k) -> (init -> l) -> (init -> m) -> (init -> n) -> (init -> o) -> (init -> p) -> init -> model
+map16 construct a b c d e f g h i j k l m n o p model = construct
   (model |> a)
   (model |> b)
   (model |> c)
