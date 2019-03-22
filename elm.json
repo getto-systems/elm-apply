@@ -3,7 +3,7 @@
     "name": "getto-systems/elm-apply",
     "summary": "apply utilities for html table",
     "license": "MIT",
-    "version": "1.0.0",
+    "version": "2.0.0",
     "exposed-modules": [
         "Getto.Apply"
     ],
